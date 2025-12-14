@@ -1,0 +1,53 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title:'Buttons usage',
+      home: HomeScreen(),
+    );
+  }
+}
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Buttonsss'),
+
+      ),
+      /*
+        body: TextButton(
+        child: Text('Click here', style: TextStyle(color: Colors.deepOrange)),
+        onPressed: (){
+          print('Text Button Tapped!');
+        },
+        onLongPress: (){
+          print('LongPressed!!');
+        }
+      )*/
+      /*
+      body: ElevatedButton(
+        child: Text('Elevtated Button'),
+        onPressed: (){
+          print('Button Tapped');
+        },
+      )*/
+      body: OutlinedButton(
+        child:Text('Outlined Demo'),
+        onPressed: (){
+          print('Outlined');
+
+        },
+      )
+    );
+  }
